@@ -1,7 +1,12 @@
 import paho.mqtt.client as mqtt
 
 def on_message(client, userdata, msg):
-    print("Humidity Subscriber Received:", msg.payload.decode())
+    decoded_msg = msg.payload.decode()
+    print("Humidity Subscriber Received:", decoded_msg)
+    
+   
+    with open("log_subscriber_humidity.txt", "a") as f:
+        f.write(decoded_msg + "\n")
 
 client = mqtt.Client()
 client.connect("localhost", 1883, 60)

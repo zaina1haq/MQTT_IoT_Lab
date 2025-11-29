@@ -12,4 +12,7 @@ while True:
     message = f"Humidity: {humidity}% | ID: {student_id}"
     client.publish("iot/humidity", message)
     print("Published:", message)
+    
+    with open("log_humidity.txt", "a") as f:
+        f.write(message + "\n")
     time.sleep(3)

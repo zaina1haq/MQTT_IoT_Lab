@@ -12,4 +12,7 @@ while True:
     message = f"People Count: {people} | ID: {student_id}"
     client.publish("iot/people", message)
     print("Published:", message)
+    
+    with open("log_people.txt", "a") as f:
+        f.write(message + "\n")
     time.sleep(3)

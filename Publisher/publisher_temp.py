@@ -12,4 +12,7 @@ while True:
     message = f"Temperature: {temp}C | ID: {student_id}"
     client.publish("iot/temp", message)
     print("Published:", message)
+
+    with open("log_temp.txt", "a") as f:
+        f.write(message + "\n")
     time.sleep(3)
