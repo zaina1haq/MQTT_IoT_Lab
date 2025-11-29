@@ -7,7 +7,7 @@ client = mqtt.Client()
 client.connect("localhost", 1883, 60)
 
 while True:
-    humidity = 60
+    humidity = random.randint(40, 80)
     message = f"Humidity: {humidity}% | ID: {student_id}"
     client.publish("iot/humidity", message)
     print("Published:", message)
