@@ -1,7 +1,4 @@
-أكيد! إليك **README.md** جاهز ومرتب تستخدميه لمشروع القلب (Heart Disease Prediction).
-إذا بدك إياه كملف جاهز أحملهولِك قولّي بس.
 
----
 
 # **README.md**
 
@@ -24,7 +21,6 @@ jupyter notebook heart_disease.ipynb
 
 5. Run all cells sequentially:
    - Press **Kernel → Restart & Run All**
-   - أو اختاري **Shift + Enter** لتشغيل كل خلية
 
 ## **Required Libraries**
 
